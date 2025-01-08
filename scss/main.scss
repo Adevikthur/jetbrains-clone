@@ -1,9 +1,18 @@
+body {
+    font-family: "JetBrains Sans", "Inter", system-ui, "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    color: var(--off-black);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 // Typography mixin
 @mixin text-style($font-size, $font-weight, $line-height) {
     font-size: $font-size;
     font-weight: $font-weight;
     line-height: $line-height;
-    margin: 0; 
+    margin: 0;
 }
 
 // Heading styles
@@ -79,22 +88,50 @@
 // For smaller screens
 @media (max-width: 768px) {
     .h {
-        &--1 { @include text-style(36px, 700, 44px); }
-        &--2 { @include text-style(32px, 700, 40px); }
-        &--3 { @include text-style(28px, 700, 36px); }
-        &--4 { @include text-style(20px, 600, 28px); }
-        &--5 { @include text-style(18px, 600, 26px); }
-        &--6 { @include text-style(16px, 600, 24px); }
+        &--1 {
+            @include text-style(36px, 700, 44px);
+        }
+
+        &--2 {
+            @include text-style(32px, 700, 40px);
+        }
+
+        &--3 {
+            @include text-style(28px, 700, 36px);
+        }
+
+        &--4 {
+            @include text-style(20px, 600, 28px);
+        }
+
+        &--5 {
+            @include text-style(18px, 600, 26px);
+        }
+
+        &--6 {
+            @include text-style(16px, 600, 24px);
+        }
     }
 
     .p {
         &--18 {
-            &--medium { @include text-style(16px, 500, 24px); }
-            &--regular { @include text-style(16px, 400, 24px); }
+            &--medium {
+                @include text-style(16px, 500, 24px);
+            }
+
+            &--regular {
+                @include text-style(16px, 400, 24px);
+            }
         }
+
         &--16 {
-            &--medium { @include text-style(14px, 500, 22px); }
-            &--regular { @include text-style(14px, 400, 22px); }
+            &--medium {
+                @include text-style(14px, 500, 22px);
+            }
+
+            &--regular {
+                @include text-style(14px, 400, 22px);
+            }
         }
     }
 }
