@@ -1,0 +1,100 @@
+// Typography mixin
+@mixin text-style($font-size, $font-weight, $line-height) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    margin: 0; 
+}
+
+// Heading styles
+.h {
+    &--1 {
+        @include text-style(48px, 700, 56px);
+    }
+
+    &--2 {
+        @include text-style(40px, 700, 48px);
+    }
+
+    &--3 {
+        @include text-style(32px, 700, 40px);
+    }
+
+    &--4 {
+        @include text-style(24px, 600, 32px);
+    }
+
+    &--5 {
+        @include text-style(20px, 600, 28px);
+    }
+
+    &--6 {
+        @include text-style(16px, 600, 24px);
+    }
+}
+
+// Paragraph styles
+.p {
+    &--18 {
+        &--medium {
+            @include text-style(18px, 500, 28px);
+        }
+
+        &--regular {
+            @include text-style(18px, 400, 28px);
+        }
+    }
+
+    &--16 {
+        &--medium {
+            @include text-style(16px, 500, 24px);
+        }
+
+        &--regular {
+            @include text-style(16px, 400, 24px);
+        }
+    }
+
+    &--14 {
+        &--medium {
+            @include text-style(14px, 500, 20px);
+        }
+
+        &--regular {
+            @include text-style(14px, 400, 20px);
+        }
+    }
+
+    &--12 {
+        &--medium {
+            @include text-style(12px, 500, 18px);
+        }
+
+        &--regular {
+            @include text-style(12px, 400, 18px);
+        }
+    }
+}
+
+// For smaller screens
+@media (max-width: 768px) {
+    .h {
+        &--1 { @include text-style(36px, 700, 44px); }
+        &--2 { @include text-style(32px, 700, 40px); }
+        &--3 { @include text-style(28px, 700, 36px); }
+        &--4 { @include text-style(20px, 600, 28px); }
+        &--5 { @include text-style(18px, 600, 26px); }
+        &--6 { @include text-style(16px, 600, 24px); }
+    }
+
+    .p {
+        &--18 {
+            &--medium { @include text-style(16px, 500, 24px); }
+            &--regular { @include text-style(16px, 400, 24px); }
+        }
+        &--16 {
+            &--medium { @include text-style(14px, 500, 22px); }
+            &--regular { @include text-style(14px, 400, 22px); }
+        }
+    }
+}
